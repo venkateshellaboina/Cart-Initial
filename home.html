@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title></title>
+	<script type="text/javascript">
+		var cnt=1;
+		function add()
+		{
+            document.getElementById("itemscount").value=cnt;
+            cnt=cnt+1;
+		}
+		function del()
+		{
+			cnt=cnt-1;
+            document.getElementById("itemscount").value=cnt;
+         }
+	</script>
+</head>
+<body bgcolor="#20a39e">
+<!-- <div style="height:30px;width:30px;margin-right: 1px;float:right">
+	<h3>items cnt:</h3><input type="text" size="2" id="itemscount">
+</div> -->
+<div style="text-align: center;vertical-align: middle;">
+ 
+    <h1>ADD TO CART</h1>
+ 	<form action="/add" method="post">
+ 	<pre>
+ 	Item name   :	<input type="text" name="name"> <br> 
+ 	Description :	<input type="text" name="description"> <br> 
+ 	price       :	<input type="number" name="price"> <br> 
+ 	quantity    :	<input type="number" name="quantity"> <br> 
+ 	<input type="submit" name="Add" value="Add to cart">
+    </pre>
+    </form>
+    <br>
+    <h1>TO DELETE FROM CART</h1>
+    <form action="/del" method="post">
+    <pre>
+ 	item name   :   <input type="text" name="dname"> <br> 
+ 	<input type="submit" name="delete" value="Delete from cart">
+ 	</pre>
+ 	</form>
+
+    <h1>SHOW CART DETAILS:</h1>
+    <form action="/show" method="post">
+    <pre>
+	<input type="submit" name="Go to Cart" value="Go to cart">
+	</pre>
+    <h1>TOTAL COST:</h1>
+    <form action="/cost" method="get">
+    <pre>
+	<input type="submit" name="cost" value="Cost">
+	</pre>
+    </form> 
+</div>
+</body>
+</html>
